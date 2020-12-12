@@ -31,8 +31,8 @@ function render(variables = {}) {
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
-            ${variables.background}
-          <img src="${variables.avatar}" class="photo" />
+            ${cover}
+          <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name} ${variables.lastname}</h1> 
           <h2>${variables.role}</h2>
           <h3>${variables.city} ${variables.country}</h3>
@@ -69,9 +69,7 @@ window.onload = function() {
     lastname: "",
     role: "Role",
     country: "Country",
-    city: "City",
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
-    avatar: "https://media-exp1.licdn.com/dms/image/C5103AQHtmq7UtMeUSw/profile-displayphoto-shrink_400_400/0/1517555840267?e=1613001600&v=beta&t=oB6_L44BGIb-wiGVB9sWUjTzY1g1qKp_zzGaeyIk5Jg"
+    city: "City"
   };
   render(window.variables); //render the card for the first time
 
